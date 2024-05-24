@@ -1,0 +1,197 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    font-size: 1.6rem;
+    /*margin-inline: auto;/* USADO PARA CENTRALIZAR O CONTEÚDO NO CENTRO DA PÁGINA*/
+    
+
+    /*Quando só tem um elemento na página, você poderá centralizá-lo assim*/
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main {
+    background: white;
+    width: min(43.0rem, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0 2.0rem 5.0rem #000;
+    padding: 4.8rem 8.4rem 1.4rem 8.4rem;
+    margin-top: -2.0rem; /*Para subir um pouquinho e não ficar todo ao centro da tela*/
+
+     /*margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /*Usada para centralizar o conteúdo ao centro da tela*/
+}
+
+
+/* Screen 1 */
+
+.hide {
+    display: none;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;    
+}
+    
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight:400;
+    font-size: 1.5rem;
+    margin-bottom: 2.0rem;     
+}
+
+h1, h2, p {   
+    color: #34355B;   
+}
+
+/* Screen2 */
+
+h2 {
+    margin-bottom: 1.7rem;
+}
+
+button {
+    border: none;
+    width: 17.4rem;
+    height: 5.2rem;
+    background-color: #FF9500;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    border-radius: .4rem;
+    cursor: pointer;
+    margin-bottom: 4.8rem;
+}
+
+button:hover {
+    filter:saturate(.70);
+}
+
+/* -------------------Adicionando a animação de tremer--------------------- */
+.shake {
+    animation: shake 0.5s; /*O quão rápido ele vai balançar*/
+    animation-iteration-count: 4; /*Por quantos segundos ele irá balançar*/
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Estilizando a imagem para que tenha um cursor de ponteiro */
+img {
+    cursor: pointer;
+}
+/*------------------------Fim da função tremer----  -------------------------*/
+
+
+
+/* Adicionando a animação para a luckMessage*/
+@keyframes emerge {
+    0% {
+        transform: scale(0) translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/*
+.luckMessage {
+    opacity: 0; /* Inicialmente invisível
+    position: absolute; /* Para posicionar corretamente em relação à brokenBiscuit
+    top: 50%; /* Começa no centro vertical
+    left: 50%; /* Começa no centro horizontal 
+    transform: translate(50%, 50%); /* Centraliza a partir do centro da brokenBiscuit
+}*/
+
+.emerge {
+    animation: emerge 1s forwards;
+    top: auto; /* Reseta a posição top após a animação */
+    left: auto; /* Reseta a posição left após a animação */
+    transform: none; /* Remove a transformação para a posição final */
+    opacity: 1;
+    margin-top: 1.7rem; /* Define a margem final abaixo do h2 */
+    position: static; /* Volta ao fluxo normal do documento */
+}
+
+
+
+
+
+
+
+
+
+/* Adicionando a animação para a luckMessage*/
+/*@keyframes emerge {
+    0% {
+        transform: scale(0) translateY(-350px); /* Começa pequena e acima da brokenBiscuit 
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0); /* Termina no tamanho original e posição final 
+        opacity: 1;
+    }
+}
+
+.luckMessage {
+    opacity: 0; /* Inicialmente invisível 
+    margin-top: 1.7rem; /* Margem final abaixo do h2 
+}
+
+.emerge {
+    animation: emerge 1s forwards;
+}
+
+img {
+    cursor: pointer;
+}*/
+
